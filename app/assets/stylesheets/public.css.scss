@@ -1,0 +1,300 @@
+/*-----------------------------------------
+	SHARED STYLES
+	----------------------------------------- 
+	$global-radii-blocks: 4px !default;
+
+	// Layout
+	$bodyBackgroundColor: white !default;
+	$contentBackgroundColor: transparent !default;
+	$footerBackgroundColor: transparent !default;
+	$mainBackgroundColor: transparent !default;
+	$sidebarBackgroundColor: transparent !default;
+
+	// Typography
+	$baseFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+	$baseFontSize: 14px !default;
+	$baseLineHeight: 20px !default;
+	$textColor: #333 !default;
+	$headingFontFamily: $baseFontFamily !default;
+	$headingTextColor: $textColor !default;
+
+
+	// Links
+	$linkColor: $textColor !default;
+	$linkColorHover: darken($linkColor, 15%) !default;
+	$linkColorActive: darken($linkColor, 15%) !default;
+
+	// Header links
+	$headerLinkColor: $linkColor !default;
+	$headerLinkColorHover: $linkColorHover !default;
+	$headerLinkColorActive: $linkColorActive !default;
+
+	// Footer links
+	$footerLinkColor: $linkColor !default;
+	$footerLinkColorHover: $linkColorHover !default;
+	$footerLinkColorActive: $linkColorActive !default;
+
+
+	// Navbar
+	$navbarBackgroundHighlight: $bodyBackgroundColor !default;
+	$navbarBackground: $bodyBackgroundColor !default;
+	$navbarText: $textColor !default;
+	$navbarLinkColor: $linkColor !default;
+	$navbarLinkColorHover: $linkColorHover !default;
+	$navbarLinkColorActive: $linkColorHover !default; 
+	$navbarButtonBackgroundHighlight: $navbarBackgroundHighlight !default; 
+	$navbarButtonBackground: $navbarBackground !default; 
+	$navbarButtonIconBarColor: white !default;
+
+	// Form
+	$inputTextColor: $textColor !default;
+	$inputBackgroundColor: $bodyBackgroundColor !default;
+	$inputBorderColor: $textColor !default;
+	$inputFocusBorderColor: rgba(82, 168, 236, 0.8) !default; 
+	$inputBorderRadius: 3px !default; 
+----------------------------------------- */
+
+$blue: #274665;
+
+$global-radii-blocks: 4px;
+$rowMaxWidth: 700px;
+
+// Layout
+$bodyBackgroundColor: #DADAD2;
+$contentBackgroundColor: transparent;
+$footerContainerBackgroundColor: #e8e8e2;
+$mainBackgroundColor: transparent;
+$sidebarBackgroundColor: transparent;
+
+// Typography
+$baseFontFamily: "proxima-nova-extra-condensed", "Lucida Grande", Arial, sans-serif; 
+$baseFontSize: 16px;
+$baseLineHeight: 24px;
+$textColor: #474747;
+$headingFontFamily: "proxima-nova-extra-condensed", "Lucida Grande", Arial, sans-serif;
+$headingTextColor: $textColor;
+
+// Links
+$linkColor: $blue;
+$linkColorHover: $textColor;
+$linkColorActive: $textColor;
+
+// Header links
+$headerLinkColor: $textColor;
+$headerLinkColorHover: $blue;
+$headerLinkColorActive: $blue;
+
+// Footer links
+$footerLinkColor: $textColor;
+$footerLinkColorHover: $blue;
+$footerLinkColorActive: $blue;
+
+
+
+// Navbar
+$navbarBackgroundHighlight: black;
+$navbarBackground: black;
+$navbarText: $textColor;
+
+$navbarLinkColor: $bodyBackgroundColor;
+$navbarLinkColorHover: white;
+$navbarLinkColorActive: white; 
+$navbarButtonBackgroundHighlight: $navbarBackgroundHighlight; 
+$navbarButtonBackground: $navbarBackground; 
+$navbarButtonIconBarColor: white;
+
+// Form
+$inputTextColor: $textColor;
+$inputBackgroundColor: $bodyBackgroundColor;
+$inputBorderColor: $textColor;
+$inputFocusBorderColor: rgba(82, 168, 236, 0.8); 
+$inputBorderRadius: 3px;
+
+@import "gko_public_all"; 
+@import "gko/elastislide";  
+/*-----------------------------------------
+   SHARED STYLES 
+----------------------------------------- */
+.next-previous {
+	display:none;
+} 
+/*-----------------------------------------
+ TYPOGRAPHY 
+----------------------------------------- */
+h1 {
+	font-size: 32px;
+	text-transform: uppercase;
+	line-height: 64px;
+	font-weight: normal;
+}
+h2 {
+	font-size: 16px;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+h4 {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+	line-height: 70px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+/*-----------------------------------------
+   OVERWRITTE
+----------------------------------------- */
+/*-----------------------------------------
+   STRUCTURE
+----------------------------------------- */ 
+#content-container {
+	border-top:12px solid #e8e8e2;
+	margin: 0;
+	padding: 24px;
+}
+.navbar {
+margin-bottom: 0px;
+}
+a.bordered img,
+.diaporama .image-large-wrapper,
+.carousel-inner {
+	border:12px solid #e8e8e2;
+}
+/*-----------------------------------------
+ HEADER
+----------------------------------------- */
+body {
+	border-top: 6px solid $blue;
+} 
+.navbar-inner {
+	background: $bodyBackgroundColor asset-url("bg.png", image) 0px 0px repeat;
+}
+.navbar .header-nav .nav > li > a {
+	text-transform: uppercase;
+	font-family: "proxima-nova-extra-condensed", "Georgia", serif;
+	font-size: 16px;
+}
+/*-----------------------------------------
+ Thumbnails Grids of images, videos, text, and more
+----------------------------------------- */
+.thumbnail {
+	@include box-shadow(none);
+	.thumbnail-image {
+		overflow: hidden;
+	  	border:12px solid #e8e8e2;
+		background: $textColor;
+	    -moz-box-shadow: 0 0 65px black inset, 0 0 20px black inset, 0 0 1px black;  
+	    -webkit-box-shadow: 0 0 65px black inset, 0 0 20px black inset, 0 0 1px black;  
+	    box-shadow: 0 0 65px black inset, 0 0 20px black inset, 0 0 1px black;  
+	    -moz-transition: all 0.3s ease-out;  
+	    -webkit-transition: all 0.3s ease-out;  
+	    transition: all 0.3s ease-out;
+		&:hover,  
+		&:focus {  
+		    transform: scale(1.2);  
+		    box-shadow: 0 0 65px black inset, 0 0 20px black inset, 0 0 15px black;  
+		}
+	}
+	.caption {
+		h2 {
+			a {
+				span.product-title { font-size: .8em; font-weight: 400;}
+				span.product-price { float:right; font-weight: 400;}
+			}
+		}
+	}
+}
+
+/*-----------------------------------------
+   HOME
+----------------------------------------- */
+.html_text {
+	font-family: "proxima-nova-extra-condensed", "Georgia", serif;
+	font-size: 16px;
+	p {
+
+		font-family: "proxima-nova-extra-condensed", "Georgia", serif;
+		font-size: 16px;
+	}
+} 
+#home .entry-description {
+	display:none;
+}
+
+/*-----------------------------------------
+ GLOBAL EFFECT
+----------------------------------------- */
+a {
+	@include transition(color .5s linear, background-color .5s linear)
+}
+/*-----------------------------------------
+ RESPONSIVE
+----------------------------------------- */
+@import "gko/responsive";
+@media (min-width: 980px) {
+	/*-----------------------------------------
+	 HEADER
+	----------------------------------------- */ 
+	.navbar .header-nav nav {
+		@include center-nav;  
+	}
+
+
+	.navbar .header-nav .nav > li { 
+		
+		.icon {
+			display: inline-block;
+			width:8px;
+			height: 8px;
+		} 
+		&:first-child { 
+			background: none;
+			padding-left: 0;
+			.text {
+				padding-left: 0; 
+			}
+			.icon {
+				display: none;
+			} 
+		}
+	}
+	
+	.navbar .nav-collapse {
+		margin-top:10px;
+		@include clearfix;
+		@include nav-pills;
+	}
+	.navbar .nav-collapse .nav .dropdown-menu {
+		background-color: $textColor;
+	}
+	.navbar .nav-collapse .nav .dropdown-menu > li .text {
+		padding-left: 0px;
+	}
+	/*-----------------------------------------
+	 FOOTER
+	----------------------------------------- */
+	#footer {
+		padding-bottom: $baseLineHeight * .5;
+		padding-top: $baseLineHeight * .5;
+		nav {
+			@include center-nav;  
+		}
+		.nav > li > a  {
+			font-weight: normal;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+	/*-----------------------------------------
+	 COPYRIGHT
+	----------------------------------------- */
+	#copyright {
+		text-align: center;
+	}
+		
+}
