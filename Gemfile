@@ -9,13 +9,13 @@ group :assets do
 end
 
 group :production do
-  gem "gko_core", "=  0.2.57", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem "gko_auth", "=  0.2.57", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem "gko_images", "=  0.2.57", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem "gko_documents", "=  0.2.57", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem "gko_inquiries", "=  0.2.57", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem "gko_themes", "=  0.2.57", :git => 'git@github.com:jdfdesign/gko_cms3.git'
-  gem "gko_features", "=  0.2.57", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem "gko_core", "=  0.3.18", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem "gko_auth", "=  0.3.18", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem "gko_images", "=  0.3.18", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem "gko_documents", "=  0.3.18", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem "gko_inquiries", "=  0.3.18", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem "gko_themes", "=  0.3.18", :git => 'git@github.com:jdfdesign/gko_cms3.git'
+  gem "gko_features", "=  0.3.18", :git => 'git@github.com:jdfdesign/gko_cms3.git'
 end
 #group :development do
 #	gem "gko_core", :path => File.expand_path('~/Github/gko_cms3/gko_core', __FILE__)

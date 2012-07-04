@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120418195190) do
+ActiveRecord::Schema.define(:version => 20120704185735) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -128,9 +128,10 @@ ActiveRecord::Schema.define(:version => 20120418195190) do
     t.integer  "image_height"
     t.string   "image_uid"
     t.string   "image_ext"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.integer  "country_id"
+    t.string   "language",           :limit => 5
   end
 
   add_index "document_items", ["country_id"], :name => "index_press_articles_on_country_id"
@@ -424,6 +425,7 @@ ActiveRecord::Schema.define(:version => 20120418195190) do
     t.integer  "globalized",        :default => 0
     t.integer  "level"
     t.boolean  "shallow_permalink", :default => true
+    t.boolean  "no_follow"
   end
 
   add_index "sections", ["link_id", "link_type"], :name => "index_sections_on_link_id_and_link_type"
@@ -487,6 +489,7 @@ ActiveRecord::Schema.define(:version => 20120418195190) do
     t.string   "logo_ext"
     t.integer  "site_registrations_count",               :default => 0
     t.integer  "theme_id"
+    t.string   "default_image_uid"
   end
 
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true

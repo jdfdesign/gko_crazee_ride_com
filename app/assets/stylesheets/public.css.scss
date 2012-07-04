@@ -149,6 +149,12 @@ h4 {
 /*-----------------------------------------
    OVERWRITTE
 ----------------------------------------- */
+
+.navbar .brand {
+	@include logo(351,274,'logo.jpg');
+	width: 351px;
+  	height: 274px;
+}
 /*-----------------------------------------
    STRUCTURE
 ----------------------------------------- */ 
@@ -246,28 +252,15 @@ a {
 
 
 	.navbar .header-nav .nav > li { 
-		
-		.icon {
-			display: inline-block;
-			width:8px;
-			height: 8px;
-		} 
+		padding-left:24px;
 		&:first-child { 
-			background: none;
 			padding-left: 0;
-			.text {
-				padding-left: 0; 
-			}
-			.icon {
-				display: none;
-			} 
 		}
 	}
 	
 	.navbar .nav-collapse {
 		margin-top:10px;
 		@include clearfix;
-		@include nav-pills;
 	}
 	.navbar .nav-collapse .nav .dropdown-menu {
 		background-color: $textColor;
